@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet - Meter converter</title>
+</head>
+<body>
+<table style="border-collapse:collapse;">
+    <tr style="border-bottom: 1px solid black;">
+        <th style="border-right: 1px solid black; width: 20%"><bold>Feet</bold></th>
+        <th style="border-right: 1px solid black; width: 20%"><bold>Meters</bold></th>
+        <th style="border-right: 1px solid black; width: 20%"><bold>Meters</bold></th>
+        <th style="width: 20%"><bold>Feet</bold></th>
+    </tr>
+    <tr>
+        <td style="border-right: 1px solid black; width: 20%"><input id="feet1" type="number" placeholder="0" oninput="feetToMeter(this.value)"/></td>
+        <td style="border-right: 1px solid black; width: 20%" id="meter1"></td>
+        <td style="border-right: 1px solid black; width: 20%"><input id="meter2" type="number" placeholder="0" oninput="meterToFeet(this.value)"/></td>
+        <td style="border-right: 1px solid black; width: 20%" id="feet2"></td>
+    </tr>
+</table>
+<script>
+    function feetToMeter(a) {
+        document.getElementById("meter1").innerHTML = 0.305 * a;
+    }
+    function meterToFeet(b) {
+        document.getElementById("feet2").innerHTML = 3.279 * b;
+    }
+</script>
+</body>
+</html>
